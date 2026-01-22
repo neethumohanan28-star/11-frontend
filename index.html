@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Only Hover Effect</title>
+</head>
+<body>
+
+<h2>JavaScript Only Hover Effect</h2>
+
+<script>
+    // Create the image dynamically
+    const img = document.createElement("img");
+    img.src = "https://cdn.pixabay.com/photo/2023/06/01/17/25/hacker-8033977_1280.jpg";
+    img.alt = "Hacker at computer";
+    img.width = 450;
+
+    // Append the image to the body
+    document.body.appendChild(img);
+
+    // Smooth disappearance/reappearance using JS
+    img.style.transition = "opacity 0.3s"; // inline JS style for smooth fade
+
+    // Mouse enters → disappear
+    img.addEventListener("mouseenter", () => {
+        img.style.opacity = "0"; // invisible
+    });
+
+    // Mouse leaves → reappear
+    img.addEventListener("mouseleave", () => {
+        img.style.opacity = "1"; // visible
+    });
+</script>
+
+</body>
+</html>
